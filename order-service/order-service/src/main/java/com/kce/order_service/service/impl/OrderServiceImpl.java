@@ -33,13 +33,15 @@ public class OrderServiceImpl implements OrderService {
            System.out.println(flavourData);
 	        double price = Double.parseDouble(flavourData.get("price").toString());
 	        double totalPrice = price * orderRequest.getQuantity();
-
+            String flavourName=flavourData.get("name").toString();
 	        Order order = new Order();
-	        order.setFlavorId(orderRequest.getFlavorId());
+//	        order.setFlavorId(orderRequest.getFlavorId());
+	        order.setFlavourName(flavourName);
 	        order.setCouponCode(orderRequest.getCouponCode());
 	        order.setUserName(orderRequest.getUserName());
+	        order.setTotalPrice(totalPrice);
 	        order.setQuantity(orderRequest.getQuantity());
-	        order.setPrice(totalPrice);
+	        order.setPrice(price);
 	        order.setOrderDate(LocalDateTime.now());
 
 	        return orderRepository.save(order);

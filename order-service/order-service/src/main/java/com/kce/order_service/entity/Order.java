@@ -17,10 +17,12 @@ public class Order {
 	@Id
     private String id;
     private String userName;
-    private String flavorId;
+//    private String flavorId;
+    private String flavourName;
     private String couponCode;
     private int quantity;
     private double price;
+    private double totalPrice;
     private LocalDateTime orderDate;
 
 	

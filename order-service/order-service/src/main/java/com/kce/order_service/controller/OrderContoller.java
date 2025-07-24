@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.kce.order_service.dto.Flavour;
 import com.kce.order_service.dto.OrderRequest;
 import com.kce.order_service.entity.Order;
+import com.kce.order_service.enumeration.ResponseStatus;
 import com.kce.order_service.response.CommonResponse;
 import com.kce.order_service.service.OrderService;
 
@@ -27,9 +28,26 @@ public class OrderContoller {
     private OrderService orderService;
 
 	 @PostMapping
-	 public ResponseEntity<Order> createOrder(@RequestBody OrderRequest orderRequest) {
+	 public ResponseEntity<CommonResponse> createOrder(@RequestBody OrderRequest orderRequest) {
+		 CommonResponse commonResponse=new CommonResponse();
 	       Order createdOrder = orderService.createOrder(orderRequest);
-	       return ResponseEntity.ok(createdOrder);
+	       if(createdOrder!=null)
+	       {
+	    	   commonResponse.setData(createdOrder);
+	    	   commonResponse.setMessage("Order Placed Sucessfully");
+	    	   commonResponse.setStatusCode(200);
+	    	   commonResponse.setStatus(ResponseStatus.SUCCESS);
+	    	   return ResponseEntity.status(200).body(commonResponse);
+	       }
+	       else {
+	    	   commonResponse.setData(createdOrder);
+	    	   commonResponse.setMessage("Failed to fetch order");
+	    	   commonResponse.setStatus(ResponseStatus.FAILED);
+	    	   commonResponse.setStatusCode(400);
+	    	   return ResponseEntity.badRequest().body(commonResponse);
+	    	   
+	       }
+//	       return ResponseEntity.ok(createdOrder);
 	 }
 
     @GetMapping
