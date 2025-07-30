@@ -25,4 +25,4 @@ USER appuser
 
 EXPOSE 8088
 
-ENTRYPOINT ["java", "-jar", "icecream-service.jar"] 
+ENTRYPOINT ["java", "-jar", "eureka-server.jar"] 
