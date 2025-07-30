@@ -5,50 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44dbca22-b949-4126-8592-4b6a5877a03f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon-service/src/main/java/com/kce/coupon_service/repository/CouponRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/coupon-service/src/main/java/com/kce/coupon_service/repository/CouponRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/src/main/java/com/kce/icecream_service/IcecreamServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/src/main/java/com/kce/icecream_service/controller/IceCreamController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/src/main/java/com/kce/icecream_service/dto/Coupon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/src/main/java/com/kce/icecream_service/dto/FlavourDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/src/main/java/com/kce/icecream_service/entity/ErrorDetails.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/src/main/java/com/kce/icecream_service/enumeration/ResponseStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/src/main/java/com/kce/icecream_service/exception/GlobalExcepetionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/src/main/java/com/kce/icecream_service/feignClient/CouponFeign.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/src/main/java/com/kce/icecream_service/model/Flavour.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/src/main/java/com/kce/icecream_service/repository/IceCreamRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/src/main/java/com/kce/icecream_service/response/CommonResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/src/main/java/com/kce/icecream_service/service/IceCreamService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/src/main/java/com/kce/icecream_service/service/impl/IceCreamServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/src/main/java/com/kce/icecream_service/utility/FlavourNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecream-service/icecream-service/src/test/java/com/kce/icecream_service/IcecreamServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/.project" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/kce/order_service/OrderServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/kce/order_service/controller/OrderContoller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/kce/order_service/dto/Flavour.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/kce/order_service/dto/OrderRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/kce/order_service/entity/Order.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/kce/order_service/enumeration/ResponseStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/kce/order_service/feignClient/IceCreamFeign.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/kce/order_service/repository/OrderRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/kce/order_service/response/CommonResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/kce/order_service/service/OrderService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/src/main/java/com/kce/order_service/service/impl/OrderServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-service/src/test/java/com/kce/order_service/OrderServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coupon-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/bin/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/bin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/bin/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/bin/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/bin/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/bin/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/bin/src/main/java/com/kce/gateway/GatewayApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/bin/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/bin/src/test/java/com/kce/gateway/GatewayApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/src/main/java/com/kce/gateway/GatewayApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/src/main/java/com/kce/gateway/controller/LogFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway/src/test/java/com/kce/gateway/GatewayApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icecream-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/icecream-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +64,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/Spring/FSJ",
     "node.js.detected.package.eslint": "true",
@@ -112,6 +92,7 @@
       <updated>1753846318839</updated>
       <workItem from="1753846320399" duration="1319000" />
       <workItem from="1753850082119" duration="87000" />
+      <workItem from="1753854838367" duration="216000" />
     </task>
     <servers />
   </component>

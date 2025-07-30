@@ -1,0 +1,79 @@
+version: "3.8"
+
+services:
+  eureka-server:
+    image: poovarasan1310/eureka-server
+    build:
+      context: ./eureka-server
+      dockerfile: Dockerfile
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - app-network
+
+
+  mongo:
+    image: mongo:6.0
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+
+  coupon-service:
+    image: poovarasan1310/coupon-service
+    build:
+      context: ./coupon-service
+      dockerfile: Dockerfile
+    container_name: coupon-service
+    restart: on-failure
+    ports:
+      - "8091:8091"
+    environment:
+      - SPRING_APPLICATION_NAME=coupon-service
+      - SPRING_DATA_MONGODB_HOST=mongo
+      - SPRING_DATA_MONGODB_PORT=27017
+      - SPRING_DATA_MONGODB_DATABASE=coupon
+      - SPRING_DATA_MONGODB_AUTO_INDEX_CREATION=true
+      - SERVER_PORT=8091
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka
+    networks:
+      - app-network
+    depends_on:
+      - eureka-server
+      - mongo
+
+  icecream-service:
+    image: poovarasan1310/icecream-service
+    build:
+      context: ./icecream-service
+      dockerfile: Dockerfile
+    container_name: icecream-service
+    restart: on-failure
+    ports:
+      - "8090:8090"
+    environment:
+      - SPRING_APPLICATION_NAME=icecream-service
+      - SPRING_DATA_MONGODB_HOST=mongo
+      - SPRING_DATA_MONGODB_PORT=27017
+      - SPRING_DATA_MONGODB_DATABASE=icecream
+      - SPRING_DATA_MONGODB_AUTO_INDEX_CREATION=true
+      - SERVER_PORT=8090
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka
+      # Resilience4j Circuit Breaker
+      - RESILIENCE4J_CIRCUITBREAKER_INSTANCES_CIRCUITBREAKERSERVICE_FAILURE_RATE_THRESHOLD=50
+      - RESILIENCE4J_CIRCUITBREAKER_INSTANCES_CIRCUITBREAKERSERVICE_MINIMUM_NUMBER_OF_CALLS=10
+      - RESILIENCE4J_CIRCUITBREAKER_INSTANCES_CIRCUITBREAKERSERVICE_AUTOMATIC_TRANSITION_FROM_OPEN_TO_HALF_OPEN_ENABLED=true
+      - RESILIENCE4J_CIRCUITBREAKER_INSTANCES_CIRCUITBREAKERSERVICE_WAIT_DURATION_IN_OPEN_STATE=5s
+      - RESILIENCE4J_CIRCUITBREAKER_INSTANCES_CIRCUITBREAKERSERVICE_PERMITTED_NUMBER_OF_CALLS_IN_HALF_OPEN_STATE=3
+      - RESILIENCE4J_CIRCUITBREAKER_INSTANCES_CIRCUITBREAKERSERVICE_SLIDING_WINDOW_SIZE=10
+    networks:
+      - app-network
+    depends_on:
+      - eureka-server
+      - mongo
+
+networks:
+  app-network:
+    driver: bridge
