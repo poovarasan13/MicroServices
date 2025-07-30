@@ -9,12 +9,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class ErrorDetails {
     
-	public ErrorDetails(Date timestamp, String message, String description) {
-		super();
-		this.timestamp = timestamp;
-		this.message = message;
-		this.description = description;
-	}
+	
 	private Date timestamp;
     private String message;
     private String description;
